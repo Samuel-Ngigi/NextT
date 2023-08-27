@@ -1,24 +1,29 @@
-//Connection to the database.
-const express = require ("express");
-const https = require("https");
+
+import express from 'express'
+// These lines make "require" available
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
 const bodyParser =require("body-parser")
 const ejs = require("ejs");
 const joi = require("joi");
 const router = express.Router();
 
-
-
 const { Schema, default: mongoose } = require("mongoose");
-const { stringify } = require("querystring");
-const { log } = require("console");
-const { error } = require("console");
-const { validateHeaderValue } = require("http");
-const { Http2ServerRequest } = require("http2");
-import {dbConnection} from './apikeys'
 
+
+// const { stringify } = require("querystring");
+// const { log } = require("console");
+// const { error } = require("console");
+// const { validateHeaderValue } = require("http");
+// const { Http2ServerRequest } = require("http2");
 const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
 app.set("view engine", "ejs")
+
+//user defined modules
+import {dbConnection} from './jsmodules/apikeys.js';
+
 
 // mongoose.connect("mongodb://127.0.0.1:27017/NextTUsersDB");
 dbConnection;
@@ -114,7 +119,7 @@ if (error){
 
     //  insert the new user if they do not exist
 
-     newUser = new userAc2({
+    const newUser = new userAc2({
         name: req.body.name,
         password:req.body.password
      });
