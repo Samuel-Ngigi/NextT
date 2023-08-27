@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add user Account</title>
+
+    <style>
+        .form-body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ln-form {
+            border: 1px solid rgb(12, 11, 11);
+            border-radius: 16px;
+            border-radius: 2px;
+            background-color: #11d48d;
+
+        }
+
+        .form-fields {
+            display: flex;
+            flex-direction: column;
+            height: 30vh;
+            gap: 16px;
+            padding: 32px;
+        }
+
+        .input-field {
+            height: 32px;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background-color: #007772;
+            color: white;
+            margin-left: 40px;
+            margin-bottom: 40px;
+            padding: 8px 32px;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            cursor: pointer;
+            padding: 12px 48px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+  <!-- Second input form -->
+<div class="form-body">
+    <div>
+        <h1 style="color:#007777; ">Add a user Account2fm</h1>
+        <form class="ln-form" action="/userAccount2fm" method="post">
+            <div class="form-fields">
+                <small style="display: flex; justify-content:center"><b>User name</b></small>
+                <input type="text" name="name" class="input-field" required>
+                <small style="display: flex; justify-content:center"><b>Password</b></small>
+                <input type="password" name="password" class="input-field" required>
+            </div>
+            <b style="display: flex; justify-content:center"><button type="submit"
+                    class="submit-btn"><b>Add</b></button></b>
+        </form>
+    </div>
+</div>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>

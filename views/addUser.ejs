@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+</head>
+<body>
+    <h2>Add a Network user details</h2>
+    <form action="/registerUser" method="post">
+     <div>
+         <div>
+            <small>Name</small>
+            <input type="text" name="username" required>
+            <small>Phone</small>
+            <input type="text" name="phone" required>
+            <small>Floor</small>
+            <input type="text" name="floor" required>
+            <small>Room No.</small>
+            <input type="text" name="roomNo" required>
+            <small>Month</small>
+            <input type="text" name="month" required>
+         </div>
+     </div>
+    <div>
+         <div>
+            <small>Connected Devices</small>
+            <input type="text" name="connectedDevices" required>
+            <small>Bill</small>
+            <input type="text" name="bill" required>
+            <small>Bal</small>
+            <input type="text" name="bal" required>
+            <small>status</small>
+            <input type="text" name="status" required>
+            <small>Updated On</small>
+            <input type="text" name="updatedOn" required>
+         </div>
+    </div>
+
+<button type="submit">Add</button>
+    </form>
+    <hr>
+    <br>
+   <a href="/addAdmin" style="text-decoration: none;"><h2>Add an Administrator</h2></a>
+    <br>
+    <hr>
+    <br>
+    <a href="/addUserAccount" style="text-decoration: none;"><h2>Add a user Account</h2> </a>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <a href="/findUserAcs" style="text-decoration: none;"><h2>User accounts</h2></a>
+    <br>
+    <hr><br>
+    <a href="/updateUserac" style="text-decoration: none;"><h2>Update a user account</h2></a>
+    <br>
+    <hr>
+    <br>
+    <a href="/removeUser" style="text-decoration: none;"><h2>Remove a user account</h2></a>
+    <br>
+    <hr>
+    <br>
+    <a href="/" ><h2>Log Out</h2></a>
+    <script src="../app.js"></script>
+</body>
+</html>
