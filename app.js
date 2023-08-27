@@ -14,12 +14,14 @@ const { log } = require("console");
 const { error } = require("console");
 const { validateHeaderValue } = require("http");
 const { Http2ServerRequest } = require("http2");
+import {dbConnection} from './apikeys'
 
 const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
 app.set("view engine", "ejs")
 
-mongoose.connect("mongodb://127.0.0.1:27017/NextTUsersDB");
+// mongoose.connect("mongodb://127.0.0.1:27017/NextTUsersDB");
+dbConnection;
 //std user collection defination
 const NextTUsersSchema = new mongoose.Schema(
     {
