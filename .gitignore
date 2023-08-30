@@ -1,0 +1,5 @@
+apikeys.js
+#dependancies
+/node_modules/
+/package-lock.json
+/package.json
